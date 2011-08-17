@@ -1,9 +1,9 @@
 package edu.neumont.learningChess.controller;
 
-import edu.neumont.chessModel.ChessBoardInterface;
 import edu.neumont.chessModel.ICheckChecker;
 import edu.neumont.chessModel.Move;
 import edu.neumont.chessModel.Team;
+import edu.neumont.learningChess.comm.ChessBoardInterface;
 
 public class TeamLocal extends Team {
 
