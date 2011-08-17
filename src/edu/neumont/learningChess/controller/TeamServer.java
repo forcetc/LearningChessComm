@@ -1,16 +1,16 @@
 package edu.neumont.learningChess.controller;
 
-import java.awt.Color;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-import edu.neumont.chessModel.ChessBoardInterface;
+import edu.neumont.chessModel.ChessBoard;
 import edu.neumont.chessModel.ICheckChecker;
 import edu.neumont.chessModel.Move;
 import edu.neumont.chessModel.Team;
+import edu.neumont.learningChess.comm.ChessBoardInterface;
 import edu.neumont.learningChess.comm.JSONFactory;
 import edu.neumont.learningChess.comm.JSONState;
 
@@ -28,8 +28,9 @@ public class TeamServer extends Team {
 	@Override
 	public synchronized Move getMove() {
 		//TODO fix this so user can retry if connection fails
-		Move rtnValue= null;
-		JSONState state = new JSONState(board, color.equals(Color.LIGHT));
+		Move rtnValue= null; 
+		
+		JSONState state = new JSONState(super.board, color.equals(Color.LIGHT));
 		String json = JSONFactory.createJSONFromJSONState(state);
 		try {
 			
