@@ -1,7 +1,6 @@
 package edu.neumont.learningChess.comm;
 
 import edu.neumont.chessModel.Bishop;
-import edu.neumont.chessModel.ChessBoard;
 import edu.neumont.chessModel.ChessPiece;
 import edu.neumont.chessModel.King;
 import edu.neumont.chessModel.Knight;
